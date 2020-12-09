@@ -129,7 +129,6 @@ bool isValidPassport2(std::map<std::string, std::string>& passport)
     return allof;
 }
 
-
 int Part1(std::vector<std::map<std::string, std::string>> passports)
 {
     int validPassports = 0;

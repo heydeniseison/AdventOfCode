@@ -18,22 +18,18 @@ std::vector<std::string> Split(const std::string& source, const std::string& del
     return parts;
 }
 
-void CreatePairs(std::vector<std::pair<std::string, std::string>>& parts, const std::string& source, const std::string& delim)
+std::pair<std::string, std::string> CreatePairs(const std::string& source, const std::string& delim)
 {
+    auto index = source.find(delim);
     std::pair<std::string, std::string> kv;
-    size_t prev = 0;
-    for (size_t nextDelim1 = source.find(delim); nextDelim1 != std::string::npos; nextDelim1 = source.find(delim, prev))
+    if (index != std::string::npos)
     {
-        kv.first = (source.substr(prev, nextDelim1 - prev));
-        size_t nextDelim2 = source.find(' ', nextDelim1 + 1);
-        if (nextDelim2 != std::string::npos)
-        {
-            kv.second = source.substr(nextDelim1+1, nextDelim2 - (nextDelim1 +1));
-        }
-
-        prev = nextDelim1 + delim.size();
+        kv = std::make_pair(
+            source.substr(0, index),
+            source.substr(index + 1)
+        );
     }
-    parts.push_back(kv);
+    return kv;
 }
 
 void CreateMap(std::map<std::string, std::string>& kv, const std::string& source, const std::string& delim)

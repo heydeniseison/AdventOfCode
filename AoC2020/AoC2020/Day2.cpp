@@ -1,6 +1,6 @@
 #include <vector>
 #include "Helpers.h"
-
+#
 int Part1(std::vector<std::string>& vals)
 {
     int count = 0;

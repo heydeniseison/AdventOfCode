@@ -4,11 +4,11 @@
 #include "Day2.h"
 #include "Day3.h"
 #include "Day4.h"
-//#include "Day5.h"
+#include "Day5.h"
 //#include "Day6.h"
 //#include "Day7.h"
-//#include "Day8.h"
-//#include "Day9.h"
+#include "Day8.h"
+#include "Day9.h"
 //#include "Day10.h"
 //#include "Day11.h"
 //#include "Day12.h"
@@ -31,12 +31,12 @@ int main()
 {
     //Day2();
     //Day3();
-    Day4();
+    //Day4();
     //Day5();
     //Day6();
     //Day7();
     //Day8();
-    //Day9();
+    Day9();
     //Day10();
     //Day11();
     //Day12();
